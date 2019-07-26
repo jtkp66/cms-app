@@ -1,88 +1,85 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addCase } from "../../actions/cases";
 
-export class Form extends Component {
+class Form extends Component {
+  state = {
+    casenumber: "",
+    status: "",
+    investigator: ""
+  };
+
+  static propTypes = {
+    addCase: PropTypes.func.isRequired
+  };
+
+  onChange = e =>
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+
+  onSubmit = e => {
+    e.preventDefault();
+    const { casenumber, status, investigator } = this.state;
+    const cse = { casenumber, status, investigator };
+
+    this.props.addCase(cse);
+    this.setState({
+      casenumber: "",
+      status: "",
+      investigator: ""
+    });
+  };
+
   render() {
+    const { casenumber, status, investigator } = this.state;
     return (
-      <div>
-        <section id="showcase-inner" className="py-5 text-white">
-          <div className="container">
-            <div className="row text-center">
-              <div className="col-md-12">
-                <h1 className="display-4">User Dashboard</h1>
-                <p className="lead">Manage your BT Real Estate account</p>
-              </div>
-            </div>
+      <div className="card card-body mt-4 mb-4">
+        <h2>Add Case Information</h2>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <label>Case Number</label>
+            <input
+              className="form-control"
+              type="text"
+              name="casenumber"
+              onChange={this.onChange}
+              value={casenumber}
+            />
           </div>
-        </section>
-
-        <section id="bc" className="mt-3">
-          <div className="container">
-            <nav aria-label="breadcrumb">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <a href="index.html">
-                    <i className="fas fa-home" /> Home
-                  </a>
-                </li>
-                <li className="breadcrumb-item active"> Dashboard</li>
-              </ol>
-            </nav>
+          <div className="form-group">
+            <label>Status</label>
+            <input
+              className="form-control"
+              type="text"
+              name="status"
+              onChange={this.onChange}
+              value={status}
+            />
           </div>
-        </section>
-
-        <section id="dashboard" className="py-4">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <h2>Welcome John</h2>
-                <p>
-                  Here are the property listings that you have inquired about
-                </p>
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Property</th>
-                      <th />
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>22</td>
-                      <td>45 Drivewood Circle</td>
-                      <td>
-                        <a className="btn btn-light" href="#">
-                          View Listing
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>43</td>
-                      <td>22 Westbrook rd</td>
-                      <td>
-                        <a className="btn btn-light" href="#">
-                          View Listing
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>31</td>
-                      <td>12 Samson Ave</td>
-                      <td>
-                        <a className="btn btn-light" href="#">
-                          View Listing
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          <div className="form-group">
+            <label>investigator</label>
+            <input
+              className="form-control"
+              type="text"
+              name="investigator"
+              onChange={this.onChange}
+              value={investigator}
+            />
           </div>
-        </section>
+          <div className="form-group">
+            <button type="submit" className="btn btn-info">
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     );
   }
 }
 
-export default Form;
+export default connect(
+  null,
+  { addCase }
+)(Form);

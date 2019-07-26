@@ -101,6 +101,11 @@ class Header extends Component {
                       TRY NOW
                     </a>
                   </li>
+                  <li className="nav-item">
+                    <a className="btn btn-outline-light ml-4 mt-3" href="#">
+                      Sign Up
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>

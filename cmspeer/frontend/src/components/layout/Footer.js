@@ -89,7 +89,7 @@ class Footer extends Component {
                     >
                       * indicates required
                     </small>
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">* Email address</label>
                     <input
                       type="email"
                       className="form-control"

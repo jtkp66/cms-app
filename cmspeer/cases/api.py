@@ -3,10 +3,17 @@ from rest_framework import viewsets, permissions
 from .serializers import CaseSerializer
 
 # Case Viewset
+
+
 class CaseViewSet(viewsets.ModelViewSet):
-    queryset = Case.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
 
     serializer_class = CaseSerializer
+
+    def get_queryset(self):
+        return self.request.user.cases.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)

@@ -1,5 +1,10 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+
+import { Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+import Alerts from "./layout/Alerts";
 
 import Header from "./layout/Header";
 import Dashboard from "./cases/Dashboard";
@@ -10,16 +15,30 @@ import store from "../store";
 import TopBar from "./layout/TopBar";
 import Footer from "./layout/Footer";
 
+const alertOptions = {
+  timeout: 3000,
+  position: "top center"
+};
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Fragment>
-          <TopBar />
-          <Header />
-          <About />
-          <Footer />
-        </Fragment>
+        <AlertProvider template={AlertTemplate} {...alertOptions}>
+          <Router>
+            <Fragment>
+              <Header />
+              <Alerts />
+              <div className="container">
+                <Switch>
+                  <Route exact path="/" component={Dashboard} />
+                  <Route exact path="/about" component={About} />
+                </Switch>
+              </div>
+              <Footer />
+            </Fragment>
+          </Router>
+        </AlertProvider>
       </Provider>
     );
   }

@@ -7,12 +7,12 @@ const About = () => {
         <div className="container text-center mb-5">
           <div className="row">
             <div className="col-md-12">
-              <h2>
+              <h2 className="display-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis esse officia repudiandae ad saepe ex, amet neque.
+                Perspiciatis esse officia repudiandae ad saepe.
               </h2>
               <img src="assets/img/about.jpg" alt="" />
-              <p className="mt-4">
+              <h5 className="mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perspiciatis esse officia repudiandae ad saepe ex, amet neque
                 quod accusamus rem quia magnam magni dolorum facilis ullam
@@ -21,9 +21,8 @@ const About = () => {
                 dolor sit amet consectetur adipisicing elit. Perspiciatis esse
                 officia repudiandae ad saepe ex, amet neque quod accusamus rem
                 quia magnam magni dolorum facilis ullam minima perferendis?
-                Exercitationem at quaerat commodi id libero eveniet harum
-                perferendis laborum molestias
-              </p>
+                Exercitationem at quaerat commodi id libero eveniet harum.
+              </h5>
               <h4 className="mt-4">
                 Lorem ipsum dolor CMSPeer libero eveniet.
               </h4>
@@ -32,10 +31,8 @@ const About = () => {
         </div>
       </section>
 
-      <hr />
-
       <section id="showcase-inner" className="py-5 bg-success">
-        <div className="container">
+        <div className="container mb-5">
           <div className="row">
             <div className="col-md-12">
               <h2 className="text-white text-center">
@@ -44,9 +41,9 @@ const About = () => {
               <div className="card-deck">
                 <div className="card bg-white h-75 d-inline-block mt-4">
                   <div className="card-body">
-                    <h5 className="card-title">
+                    <h4 className="card-title">
                       <u>HIGHLY ETHICAL</u>
-                    </h5>
+                    </h4>
                     <p className="card-text">
                       Exercitationem at quaerat commodi id libero eveniet harum
                       perferendis laborum molestias quia. Lorem ipsum dolor sit
@@ -58,9 +55,9 @@ const About = () => {
                 </div>
                 <div className="card bg-white mt-4">
                   <div className="card-body">
-                    <h5 className="card-title">
+                    <h4 className="card-title">
                       <u>Customer Focused</u>
-                    </h5>
+                    </h4>
                     <p className="card-text">
                       Exercitationem at quaerat commodi id libero eveniet harum
                       perferendis laborum molestias quia. Lorem ipsum dolor sit
