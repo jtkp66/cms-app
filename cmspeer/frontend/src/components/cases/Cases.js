@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getCases } from "../../actions/cases";
+import { getCases, deleteCase } from "../../actions/cases";
 
 class Cases extends Component {
   static propTypes = {
     cases: PropTypes.array.isRequired,
-    getCases: PropTypes.func.isRequired
+    getCases: PropTypes.func.isRequired,
+    deleteCase: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -27,11 +28,11 @@ class Cases extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.props.cases.map(kase => (
-                <tr key={kase.id}>
-                  <td>{kase.id}</td>
-                  <td>{kase.casenumber}</td>
-                  <td>{kase.status}</td>
+              {this.props.cases.map(cse => (
+                <tr key={cse.id}>
+                  <td>{cse.id}</td>
+                  <td>{cse.casenumber}</td>
+                  <td>{cse.status}</td>
                 </tr>
               ))}
             </tbody>
@@ -48,5 +49,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getCases }
+  { getCases, deleteCase }
 )(Cases);

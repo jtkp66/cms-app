@@ -3,19 +3,22 @@ import ReactDOM from "react-dom";
 
 import Header from "./layout/Header";
 import Dashboard from "./cases/Dashboard";
+import About from "./layout/About";
 
 import { Provider } from "react-redux";
 import store from "../store";
+import TopBar from "./layout/TopBar";
+import Footer from "./layout/Footer";
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Fragment>
+          <TopBar />
           <Header />
-          <div className="container">
-            <Dashboard />
-          </div>
+          <About />
+          <Footer />
         </Fragment>
       </Provider>
     );
