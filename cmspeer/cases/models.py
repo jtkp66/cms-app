@@ -10,5 +10,5 @@ class Case(models.Model):
     description = models.TextField(blank=True)
     is_published = models.BooleanField(default=True)
     owner = models.ForeignKey(
-        User, related_name="cases", on_delete=models.DO_NOTHING, null=True)
+        User, related_name="cases", on_delete=models.CASCADE, null=True)
     assigned_date = models.DateTimeField(default=datetime.now, blank=True)

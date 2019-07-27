@@ -1,20 +1,23 @@
 import axios from "axios";
 
 import { createMessage, returnErrors } from "./messages";
+import { tokenConfig } from "./auth";
 
 import { GET_CASES, ADD_CASE, DELETE_CASE } from "./types";
 
 // GET CASES
-export const getCases = () => dispatch => {
+export const getCases = () => (dispatch, getState) => {
   axios
-    .get("/api/cases/")
+    .get("/api/cases/", tokenConfig(getState))
     .then(res => {
       dispatch({
         type: GET_CASES,
         payload: res.data
       });
     })
-    .catch(err => console.log(err));
+    .catch(err =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };
 
 export const addCase = cse => (dispatch, getState) => {

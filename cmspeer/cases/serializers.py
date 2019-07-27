@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from cases.models import Case
 
-# Lead Serializer
+# Case Serializer
 
 
 class CaseSerializer(serializers.ModelSerializer):

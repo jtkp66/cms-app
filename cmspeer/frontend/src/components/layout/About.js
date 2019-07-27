@@ -75,50 +75,42 @@ const About = () => {
 
       <section id="team" className="py-5">
         <div className="container">
-          <h2 className="text-center">Meet our leadership</h2>
+          <h2 className="text-center mt-4 mb-4">Meet our leadership</h2>
           <div className="row text-center">
             <div className="col-md-4">
               <img
                 src="assets/img/realtors/kyle.jpg"
                 alt="Darrel Frink"
-                className="rounded-circle mb-3"
+                className="rounded-circle mb-3 mt-4"
               />
               <h4>Darrel Frink</h4>
-              <p className="text-success">
-                <i className="fas fa-award text-success mb-3" /> CEO
-              </p>
+              <p className="text-success">CEO</p>
               <hr />
-              <p>
-                <i className="fas fa-phone" /> VIEW BIO
-              </p>
+              <p>VIEW BIO</p>
             </div>
 
             <div className="col-md-4">
               <img
                 src="assets/img/realtors/mark.jpg"
                 alt="Bruce Biltrite"
-                className="rounded-circle mb-3"
+                className="rounded-circle mb-3 mt-4"
               />
               <h4>Bruce Biltrite</h4>
               <p className="text-success">CTO</p>
               <hr />
-              <p>
-                <i className="fas fa-phone" /> VIEW BIO
-              </p>
+              <p>VIEW BIO</p>
             </div>
 
             <div className="col-md-4">
               <img
                 src="assets/img/realtors/jenny.jpg"
                 alt="Isabel Esparza"
-                className="rounded-circle mb-3"
+                className="rounded-circle mb-3 mt-4"
               />
               <h4>Isabel Esparza</h4>
               <p className="text-success">Director</p>
               <hr />
-              <p>
-                <i className="fas fa-phone" /> VIEW BIO
-              </p>
+              <p>VIEW BIO</p>
             </div>
           </div>
         </div>
@@ -132,7 +124,7 @@ const About = () => {
             aperiam, unde aliquid at similique! Perspiciatis amet consectetur
             esse officia.
           </h4>
-          <p>Lorem Ipsum Law firm | California</p>
+          <p>- Lorem Ipsum Law firm | California -</p>
           <hr />
         </div>
       </section>

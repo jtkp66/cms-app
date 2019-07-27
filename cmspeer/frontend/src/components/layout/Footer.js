@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Footer extends Component {
   render() {
     return (
-      <footer classname="bg-success mt-4">
+      <footer className="bg-success mt-4">
         <div className="bg-success">
           <div className="row">
             <div className="col-xs-6 col-xs-offset-0 col-sm-3">
@@ -63,7 +63,7 @@ class Footer extends Component {
                   <li>Help Center</li>
                   <li>Blog</li>
                   <li>Careers</li>
-                  <li>Conntact Us</li>
+                  <li>Contact Us</li>
                   <li>Privacy Policy</li>
                   <li>Sitemap</li>
                 </ul>
@@ -78,7 +78,7 @@ class Footer extends Component {
                 <div className="clear twenty" />
               </div>
             </div>
-            <div className="col-xs-6 col-xs-offset-0 col-sm-3 text-white">
+            <div className="col-xs-6 col-xs-offset-0 col-sm-3 mt-2 text-white">
               <div className=" container">
                 <h4 className="mt-4">STAY IN TOUCH</h4>
                 <form>
@@ -89,7 +89,7 @@ class Footer extends Component {
                     >
                       * indicates required
                     </small>
-                    <label for="exampleInputEmail1">* Email address</label>
+                    <label>* Email address</label>
                     <input
                       type="email"
                       className="form-control"
@@ -99,25 +99,25 @@ class Footer extends Component {
                     />
                   </div>
                   <div className="form-group">
-                    <label for="exampleInputPassword1">First Name</label>
+                    <label>First Name</label>
                     <input
                       type="password"
                       className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
+                      id="firstname"
+                      placeholder="First Name"
                     />
                   </div>
                   <div className="form-group">
-                    <label for="exampleInputPassword1">Last Name</label>
+                    <label>Last Name</label>
                     <input
                       type="password"
                       className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Password"
+                      id="lastname"
+                      placeholder="Last Name"
                     />
                   </div>
 
-                  <button type="submit" className="btn btn-light">
+                  <button type="submit" className="btn btn-light text-success">
                     Subscribe
                   </button>
                 </form>

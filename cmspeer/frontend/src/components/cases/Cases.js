@@ -17,7 +17,7 @@ class Cases extends Component {
   render() {
     return (
       <Fragment>
-        <div className="col-md-6">
+        <div className="col-md-6 mt-4">
           <h4>Recent Cases</h4>
           <table className="table table-striped">
             <thead>

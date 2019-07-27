@@ -5,33 +5,51 @@ function TopCards() {
     <div>
       <div className="card-columns">
         <div className="card border-success mt-4">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the first card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>OPEN CASES</strong>
+            </p>
+            <p className="card-text">45</p>
           </div>
         </div>
         <div className="card border-success">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the second card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>PENDING LEADS</strong>
+            </p>
+            <p className="card-text">112</p>
           </div>
         </div>
         <div className="card border-success mt-4">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the third card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>NEW MESSAGES</strong>
+            </p>
+            <p className="card-text">7</p>
           </div>
         </div>
         <div className="card border-success">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the fourth card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>SIGNING</strong>
+            </p>
+            <p className="card-text">25</p>
           </div>
         </div>
         <div className="card border-success mt-4">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the fifth card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>OPEN TASK</strong>
+            </p>
+            <p className="card-text">121</p>
           </div>
         </div>
         <div className="card border-success">
-          <div className="card-body text-center">
-            <p className="card-text">Some text inside the sixth card</p>
+          <div className="card-body text-left">
+            <p className="card-text text-success">
+              <strong>RETAINED</strong>
+            </p>
+            <p className="card-text">0</p>
           </div>
         </div>
       </div>
