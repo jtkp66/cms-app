@@ -9,12 +9,17 @@ import TopCards from "./TopCards";
 export default function Dashboard() {
   return (
     <div className="container">
-      <div>
+      <div className="row">
         <TopCards />
-        <Cases />
-        <Signings />
+        <div className="col-md-6">
+          <Cases />
+          <Signings />
+        </div>
+        <div className="col-md-6">
+          <Cases />
+          <Signings />
+        </div>
       </div>
-
       <Form />
     </div>
   );

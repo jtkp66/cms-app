@@ -33,7 +33,7 @@ export class TopBar extends Component {
 
     const guestLinks = (
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-        <span className="mt-2 mr-4">1.888.345.9099</span>
+        <span className="mt-3 mr-4">1.888.345.9099</span>
         <li className="nav-item">
           <Link to="/register" className="nav-link text-success">
             Contact Us

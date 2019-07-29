@@ -69,7 +69,7 @@ class Form extends Component {
             />
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-info">
+            <button type="submit" className="btn btn-success">
               Submit
             </button>
           </div>

@@ -87,9 +87,11 @@ class Footer extends Component {
                       id="emailHelp"
                       className="form-text text-white text-right"
                     >
-                      * indicates required
+                      <span className="text-danger">*</span>indicates required
                     </small>
-                    <label>* Email address</label>
+                    <label>
+                      <span className="text-danger">*</span> Email address
+                    </label>
                     <input
                       type="email"
                       className="form-control"

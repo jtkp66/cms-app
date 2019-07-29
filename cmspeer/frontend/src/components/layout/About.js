@@ -116,9 +116,12 @@ const About = () => {
         </div>
       </section>
 
-      <section id="work" className="bg-dark text-white text-center mb-4">
+      <section
+        id="work"
+        className="bg-success text-white text-center mb-4 mt-4"
+      >
         <div className="container">
-          <h2 className="">TESTIMONIALS</h2>
+          <h2>TESTIMONIALS</h2>
           <h4>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit
             aperiam, unde aliquid at similique! Perspiciatis amet consectetur
